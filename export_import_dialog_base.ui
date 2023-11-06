@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>export_import</class>
+ <widget class="QDialog" name="export_import">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>691</width>
+    <height>513</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>export_import</string>
+  </property>
+  <widget class="QTabWidget" name="Tab_import_export">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>661</width>
+     <height>491</height>
+    </rect>
+   </property>
+   <property name="currentIndex">
+    <number>0</number>
+   </property>
+   <widget class="QWidget" name="tab">
+    <attribute name="title">
+     <string>Exportation</string>
+    </attribute>
+    <widget class="QWidget" name="verticalLayoutWidget_2">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>641</width>
+       <height>331</height>
+      </rect>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_3">
+      <item>
+       <widget class="QLabel" name="label_13">
+        <property name="text">
+         <string>Zones d'intervention :</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QgsMapLayerComboBox" name="comboBoxZone"/>
+      </item>
+      <item>
+       <widget class="Line" name="line_3">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_14">
+        <property name="text">
+         <string>Couches à enregistrer dans le projet :</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QgsCheckableComboBox" name="comboBoxCouche"/>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="checkBoxToutSelectionnerCouche">
+        <property name="text">
+         <string>Tout sélectionner</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="Line" name="line_4">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_15">
+        <property name="text">
+         <string>Dossier de destination :</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <widget class="QLineEdit" name="lineEditFolder"/>
+        </item>
+        <item>
+         <widget class="QPushButton" name="buttonFolder">
+          <property name="text">
+           <string>...</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="Line" name="line_5">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_18">
+        <property name="text">
+         <string>Nom du projet :</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="lineEditNomProjet"/>
+      </item>
+      <item>
+       <widget class="QPushButton" name="buttonExporter">
+        <property name="text">
+         <string>Exporter en projet</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab_2">
+    <attribute name="title">
+     <string>Importation</string>
+    </attribute>
+    <widget class="QToolBox" name="toolBox">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>631</width>
+       <height>411</height>
+      </rect>
+     </property>
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="page_3">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>631</width>
+        <height>330</height>
+       </rect>
+      </property>
+      <attribute name="label">
+       <string>Filtrage des entités</string>
+      </attribute>
+      <widget class="QWidget" name="verticalLayoutWidget_4">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>10</y>
+         <width>611</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_5">
+        <item>
+         <widget class="QCheckBox" name="checkBoxPolygone">
+          <property name="text">
+           <string>Mettre à jour uniquement les entités intersectées par une couche polygone :</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QgsMapLayerComboBox" name="comboBoxPolygone">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="page_5">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>98</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <attribute name="label">
+       <string>Sélection des couches source et destination</string>
+      </attribute>
+      <widget class="QWidget" name="centralwidget" native="true">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>621</width>
+         <height>321</height>
+        </rect>
+       </property>
+       <widget class="QWidget" name="verticalLayoutWidget">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>621</width>
+          <height>311</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="centralwidgetLayout"/>
+       </widget>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="page_4">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>631</width>
+        <height>330</height>
+       </rect>
+      </property>
+      <attribute name="label">
+       <string>Options Sharepoint (pièces jointes)</string>
+      </attribute>
+      <widget class="QWidget" name="layoutWidget">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>0</y>
+         <width>601</width>
+         <height>163</height>
+        </rect>
+       </property>
+       <layout class="QFormLayout" name="formLayout">
+        <item row="1" column="0">
+         <widget class="QLabel" name="label_7">
+          <property name="text">
+           <string>Site sharepoint :</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QComboBox" name="comboBox_site_sharepoint">
+          <item>
+           <property name="text">
+            <string>ALT-D21-ALTI</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>ALT-D31-ALTI</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>ALT-D39-ALTI</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>ALT-D40-ALTI</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>ALT-D50-ALTI</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>ALT-D82ALTI</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>ALT-D85-ALTI</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>ALT-D89-ALTI</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>PROJETSVDRRAD</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="label_8">
+          <property name="text">
+           <string>Dossier sharepoint:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <layout class="QHBoxLayout" name="horizontalLayout_2">
+          <item>
+           <widget class="QComboBox" name="comboBox_dossier_sharepoint"/>
+          </item>
+          <item>
+           <widget class="QPushButton" name="button_ajouter_url">
+            <property name="text">
+             <string>Ajouter</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="0" column="1">
+         <layout class="QVBoxLayout" name="verticalLayout_4">
+          <item>
+           <widget class="QTextEdit" name="label_url_sharepoint">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_4">
+            <item>
+             <widget class="QPushButton" name="button_copier_url">
+              <property name="text">
+               <string>Copier</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="button_supprimer_url">
+              <property name="text">
+               <string>Réinitialiser</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+        <item row="0" column="0">
+         <widget class="QLabel" name="label_5">
+          <property name="text">
+           <string>URL Sharepoint :</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QPushButton" name="boutonImport">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>430</y>
+       <width>631</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Importer vers la couche de destination</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QPushButton" name="helpButton">
+   <property name="geometry">
+    <rect>
+     <x>660</x>
+     <y>0</y>
+     <width>31</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgba(240, 240, 240, 0)</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>help/help.png</normaloff>help/help.png</iconset>
+   </property>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QgsCheckableComboBox</class>
+   <extends>QComboBox</extends>
+   <header>qgscheckablecombobox.h</header>
+  </customwidget>
+  <customwidget>
+   <class>QgsMapLayerComboBox</class>
+   <extends>QComboBox</extends>
+   <header>qgsmaplayercombobox.h</header>
+  </customwidget>
+ </customwidgets>
+ <tabstops>
+  <tabstop>helpButton</tabstop>
+  <tabstop>Tab_import_export</tabstop>
+  <tabstop>comboBoxZone</tabstop>
+  <tabstop>comboBoxCouche</tabstop>
+  <tabstop>checkBoxToutSelectionnerCouche</tabstop>
+  <tabstop>lineEditFolder</tabstop>
+  <tabstop>buttonFolder</tabstop>
+  <tabstop>lineEditNomProjet</tabstop>
+  <tabstop>buttonExporter</tabstop>
+  <tabstop>checkBoxPolygone</tabstop>
+  <tabstop>comboBoxPolygone</tabstop>
+  <tabstop>comboBox_site_sharepoint</tabstop>
+  <tabstop>comboBox_dossier_sharepoint</tabstop>
+  <tabstop>button_ajouter_url</tabstop>
+  <tabstop>label_url_sharepoint</tabstop>
+  <tabstop>button_copier_url</tabstop>
+  <tabstop>button_supprimer_url</tabstop>
+  <tabstop>boutonImport</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>helpButton</sender>
+   <signal>clicked()</signal>
+   <receiver>export_import</receiver>
+   <slot>openHelp()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>671</x>
+     <y>13</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>636</x>
+     <y>6</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonExporter</sender>
+   <signal>clicked()</signal>
+   <receiver>export_import</receiver>
+   <slot>exporterProjet()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>606</x>
+     <y>365</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>666</x>
+     <y>214</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonFolder</sender>
+   <signal>clicked()</signal>
+   <receiver>export_import</receiver>
+   <slot>chercherDossier()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>660</x>
+     <y>268</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>666</x>
+     <y>166</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>boutonImport</sender>
+   <signal>clicked()</signal>
+   <receiver>export_import</receiver>
+   <slot>importDonnee()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>172</x>
+     <y>374</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>200</x>
+     <y>185</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>importDonnee()</slot>
+  <slot>chercherDossier()</slot>
+  <slot>exporterProjet()</slot>
+  <slot>openHelp()</slot>
+  <slot>addGroupBox()</slot>
+  <slot>deleteLaterGroupBox()</slot>
+ </slots>
+</ui>

@@ -1,0 +1,31 @@
+<layer_groups>
+  <group name="AUDIT">
+    <layer name="14_ens_audit_cb (Hors ligne)" />
+  <layer name="14_ens_audit_bpe (Hors ligne)" />
+    <layer name="zone_audit (Hors ligne)" />
+    </group>
+<group name="AIGUILLAGE">
+    <layer name="14_ens_aig_troncon (Hors ligne)" />
+  <layer name="14_ens_aig_support (Hors ligne)" />
+    <layer name="14_ens_aig_chambre (Hors ligne)" />
+    <layer name="zone_aiguillage (Hors ligne)" />
+    </group>
+  <group name="PIQUETAGE">
+    <layer name="14_ens_piq_commentaire (Hors ligne)" />
+  <layer name="14_ens_piq_infra (Hors ligne)" />
+    <layer name="14_ens_piq_support (Hors ligne)" />
+    <layer name="14_ens_piq_chambre (Hors ligne)" />
+    <layer name="14_ens_piq_rbal (Hors ligne)" />
+    <layer name="zone_piquetage (Hors ligne)" />
+    </group>
+  <group name="ETUDE">
+    <layer name="14_ens_dens_comp_pol_exe (Hors ligne)" />
+  <layer name="14_ens_dens_comp_cb_exe (Hors ligne)" />
+    <layer name="14_ens_dens_comp_ch_support_exe (Hors ligne)" />
+    <layer name="14_ens_dens_comp_ch_chambre_exe (Hors ligne)" />
+    <layer name="14_ens_dens_comp_tec_exe (Hors ligne)" />
+    <layer name="14_ens_dens_comp_bpe_exe (Hors ligne)" />
+    <layer name="14_ens_dens_comp_st_exe (Hors ligne)" />
+    <layer name="zone_etude (Hors ligne)" />
+    </group>
+  </layer_groups>
