@@ -416,7 +416,7 @@ class export_importDialog(QtWidgets.QDialog, FORM_CLASS):
                                     comparaison_source_destination = 0
                                     for entitedestination in couchedestination.getFeatures():
                                         # Si l'id est retrouvé dans la couche de desination
-                                        if entitesource['geom'] == entitedestination['geom']:
+                                        if entitesource.geometry() == entitedestination.geometry():
                                             comparaison_source_destination = 1
                                             # mise à jour de la géométrie si le champ est geom
                                             if str(champ) != 'nouvelleentite':
